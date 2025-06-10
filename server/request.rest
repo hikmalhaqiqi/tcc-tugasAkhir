@@ -1,0 +1,62 @@
+GET http://localhost:5000/useradmin
+
+###
+POST http://localhost:5000/useradmin
+Content-Type: application/json
+
+{
+    "name" : "John",
+    "email" : "john@example.com",
+    "password" : "123",
+    "confpassword" : "123"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "john@example.com",
+    "password" : "123"
+}
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE http://localhost:5000/logout
+
+// Surat
+###
+GET http://localhost:5000/DataSurat
+
+###
+GET http://localhost:5000/DataSurat/1
+
+###
+POST  http://localhost:5000/add
+Content-Type: application/json
+
+{
+    "nama_kegiatan": "Seminar Nasional Teknologi Informasi",
+    "rincian_kegiatan": "Seminar yang menghadirkan pembicara dari industri dan akademisi untuk membahas perkembangan AI di Indonesia.",
+    "program_studi": "Informatika",
+    "tanggal_jam_mulai": "2025-06-15T09:00:00",
+    "tanggal_jam_selesai": "2025-06-15T13:00:00",
+    "file_surat_url": "https://example.com/files/surat-seminar.pdf",
+    "file_proposal_url": "https://example.com/files/proposal-seminar.pdf",
+    "status": "pending",
+    "keterangan": null
+}
+
+###
+PATCH  http://localhost:5000/update/1
+Content-Type: application/json
+
+{
+  "status": "ditolak",
+  "keterangan": "Proposal tidak lengkap"
+}
+
+###
+DELETE   http://localhost:5000/DataSurat/2
