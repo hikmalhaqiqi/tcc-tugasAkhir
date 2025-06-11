@@ -1,7 +1,7 @@
 import {Sequelize} from 'sequelize';
 
-const db_surat = new Sequelize('RECOVER_YOUR_DATA', 'root', '', {
-    host: '34.133.239.42',
+const db_surat = new Sequelize('dataSurat', 'root', 'passdatasura', {
+    host: '34.44.171.11',
     dialect: 'mysql',
 });
 

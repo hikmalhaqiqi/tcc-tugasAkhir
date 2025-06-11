@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize';
 
-const db_admin = new Sequelize('DataAdmin', 'postgres', 'tccasikdanmenyenangkan', {
-  host: '34.133.117.96',
+const db_admin = new Sequelize('dataAdmin', 'postgres', 'passdataadmin', {
+  host: '34.121.136.162',
   dialect: 'postgres',
   port: 5432,
   logging: false,
